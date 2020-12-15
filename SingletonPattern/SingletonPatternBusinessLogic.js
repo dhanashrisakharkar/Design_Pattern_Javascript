@@ -36,7 +36,7 @@ let bankAccount = function () {
         };
     }
     /**
-     * 
+     * @function :- Get single Object instance and Return it 
      */
     return {
         getInstance: function () {
@@ -47,5 +47,4 @@ let bankAccount = function () {
 };
 
 
-//module.exports = {bankAccount};
 module.exports = new bankAccount();
