@@ -3,19 +3,33 @@
 * @fileName : FactoryPatternBusinessLogic.js
 * @Auther : Dhanashri Sakharkar
 /*********************************************************************/
-
+/**
+ * @class :- Class has been make for developer name , type an salary
+ */
 class developer {
     constructor(name) {
         this.name = name
-        this.type = "Developer"
+        this.type = "Developer   "
+        this.salary = "50000"
     }
 }
 class tester {
     constructor(name) {
         this.name = name;
-        this.type = "tester"
+        this.type = "tester      "
+        this.salary = "35000"
     }
 }
+class dataAnalyst {
+    constructor(name) {
+        this.name = name;
+        this.type = "Data Analyst"
+        this.salary = "45000"
+    }
+}
+/**
+ * @param : employeeFactory class has made for taking data in form of Factory Pattern Using Switch Case.
+ */
 class employeeFactory {
     create(name, type) {
         switch (type) {
@@ -24,6 +38,9 @@ class employeeFactory {
                 break;
             case 2:
                 return new tester(name);
+                break;
+            case 3:
+                return new dataAnalyst(name);
                 break;
         }
     }
